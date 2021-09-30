@@ -60,8 +60,14 @@ export const data = {
   ],
   "filePathRelative": "components/button.md",
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1632755116000,
+    "contributors": [
+      {
+        "name": "叶苏雄",
+        "email": "xiesuxiong@xiesuxiongdeMacBook-Pro.local",
+        "commits": 1
+      }
+    ]
   }
 }
 
