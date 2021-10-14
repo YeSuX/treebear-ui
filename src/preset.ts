@@ -1,3 +1,5 @@
+//全局注册组件
+
 import * as components from './components'
 import create from './create'
 

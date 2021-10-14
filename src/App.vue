@@ -1,5 +1,5 @@
 <template>
-<sxButton>按钮</sxButton>
+<sx-Button>按钮</sx-Button>
 </template>
 
 <script>

@@ -1,7 +1,29 @@
 // Imports
 @import './_variables.scss';
 
-// Block
 .sx-button{
-  color: red;
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  user-select: none;
+  font-family: inherit;
+  border-radius: $btn-border-radius;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-weight: $btn-font-weight;
+  letter-spacing: $btn-letter-spacing;
+  text-decoration: none;
+  text-indent: $btn-letter-spacing;
+  transition-duration: $btn-transition-duration;
+  transition-property: box-shadow, transform, opacity;
+  &--default{
+    color: inherit;
+    background-color: $btn-default-color;
+    &:hover{
+      background-color: gray;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import SxButton from './Button'
+import SxButton from './Button.vue'
 
 //warn
 export {SxButton}
