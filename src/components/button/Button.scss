@@ -1,29 +1,193 @@
 // Imports
 @import './_variables.scss';
 
-.sx-button{
+.sx-button {
   position: relative;
-  display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
   outline: none;
   user-select: none;
   font-family: inherit;
-  border-radius: $btn-border-radius;
-  vertical-align: middle;
+  border-radius: $button-border-radius;
   white-space: nowrap;
-  font-weight: $btn-font-weight;
-  letter-spacing: $btn-letter-spacing;
-  text-decoration: none;
-  text-indent: $btn-letter-spacing;
-  transition-duration: $btn-transition-duration;
-  transition-property: box-shadow, transform, opacity;
-  &--default{
-    color: inherit;
+
+  &--default {
     background-color: $btn-default-color;
-    &:hover{
-      background-color: gray;
+    color: $btn-default-content-color;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-default-focus-color;
     }
   }
+
+  &--primary {
+    background-color: $btn-primary-color;
+    color: $btn-primary-content-color;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-primary-focus-color;
+    }
+  }
+
+  &--secondary {
+    background-color: $btn-secondary-color;
+    color: $btn-secondary-content-color;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-secondary-focus-color;
+    }
+  }
+
+  &--accent {
+    background-color: $btn-accent-color;
+    color: $btn-accent-content-color;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-accent-focus-color;
+    }
+  }
+  
+  &--ghost {
+    background-color: transparent;
+    color: $bg-base-content;
+    &:hover,
+    &:focus {
+      background-color: $bg-base-300;
+    }
+  }
+
+  &--info {
+    background-color: $btn-info-color;
+    color: $btn-default-content-color;
+  }
+
+  &--success {
+    background-color: $btn-success-color;
+    color: $btn-default-content-color;
+  }
+
+  &--warning {
+    background-color: $btn-warning-color;
+    color: $btn-default-content-color;
+  }
+
+  &--error {
+    background-color: $btn-error-color;
+    color: $btn-default-content-color;
+  }
+
+
+  &--normal {
+    height: $button-normal-height;
+    padding: $button-normal-padding;
+    font-size: $font-size-md;
+  }
+
+  &--mini {
+    height: $button-mini-height;
+    padding: $button-mini-padding;
+    font-size: $font-size-xs;
+  }
+
+  &--small {
+    height: $button-small-height;
+    padding: $button-small-padding;
+    font-size: $font-size-sm;
+  }
+
+  &--large {
+    height: $button-large-height;
+    padding: $button-large-padding;
+    font-size: $font-size-lg;
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &--round {
+    border-radius: 25px;
+  }
+
+  &--disabled{
+    background-color: $bg-base-300;
+    color: $bg-base-200;
+    box-shadow: none !important;
+    pointer-events: none;
+  }
+}
+
+.sx-button--default.sx-button--bordered {
+  background-color: transparent;
+  border: 1px solid $btn-default-color;
+  color: $btn-default-color;
+  &:hover,
+    &:focus {
+      background-color: $btn-default-focus-color;
+      color: $btn-default-content-color;
+      border-color: $btn-default-focus-color;
+    }
+}
+.sx-button--primary.sx-button--bordered {
+  background-color: transparent;
+  border: 1px solid $btn-primary-color;
+  color: $btn-primary-color;
+  &:hover,
+    &:focus {
+      background-color: $btn-primary-focus-color;
+      color: $btn-primary-content-color;
+      border-color: $btn-primary-focus-color;
+    }
+}
+.sx-button--secondary.sx-button--bordered {
+  background-color: transparent;
+  border: 1px solid $btn-secondary-color;
+  color: $btn-secondary-color;
+  &:hover,
+    &:focus {
+      background-color: $btn-secondary-focus-color;
+      color: $btn-secondary-content-color;
+      border-color: $btn-secondary-focus-color;
+    }
+}
+.sx-button--accent.sx-button--bordered {
+  background-color: transparent;
+  border: 1px solid $btn-accent-color;
+  color: $btn-accent-color;
+  &:hover,
+    &:focus {
+      background-color: $btn-accent-focus-color;
+      color: $btn-accent-content-color;
+      border-color: $btn-accent-focus-color;
+    }
+}
+
+.sx-button--circle.sx-button--large{
+  border-radius: 999px;
+  height: $button-large-height;
+  width: $button-large-height;
+  padding: 0;
+}
+.sx-button--circle.sx-button--normal{
+  border-radius: 999px;
+  height: $button-normal-height;
+  width: $button-normal-height;
+  padding: 0;
+}
+.sx-button--circle.sx-button--small{
+  border-radius: 999px;
+  height: $button-small-height;
+  width: $button-small-height;
+  padding: 0;
+}
+.sx-button--circle.sx-button--mini{
+  border-radius: 999px;
+  height: $button-mini-height;
+  width: $button-mini-height;
+  padding: 0;
 }
