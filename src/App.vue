@@ -41,9 +41,11 @@
 <sx-button bordered type="accent">按钮</sx-button>
 <br>
 <sx-button disabled>按钮</sx-button>
+<br>
+<sx-button :ripple=false>按钮</sx-button>
 </template>
 
-<script>
+<script lang="ts">
 export default {
 }
 </script>

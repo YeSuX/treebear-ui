@@ -1,5 +1,6 @@
 <template>
   <button
+    v-ripple="{ disabled: disabled || !ripple }"
     class="sx-button"
     :class="[
       `sx-button--${size}`,
@@ -8,19 +9,24 @@
       round ? 'sx-button--round' : null,
       circle ? 'sx-button--circle' : null,
       bordered ? 'sx-button--bordered' : null,
-      ghost ? 'sx-button--ghost' : null,
       disabled ? 'sx-button--disabled' : null,
     ]"
     :style="{ background: color, color: textColor }"
+    :disabled="disabled"
   >
-    <slot></slot>
+    <div class="var-button__content">
+      <slot></slot>
+    </div>
   </button>
 </template>
 
 <script lang="ts">
 import { props } from "./props";
+import Ripple from "../ripple";
+
 export default {
   name: "Button",
+  directives: { Ripple },
   props,
   created() {
     console.log();
@@ -29,5 +35,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../_styles/main.scss";
 @import "./Button.scss";
 </style>
