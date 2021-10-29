@@ -12,14 +12,18 @@
   border-radius: $button-border-radius;
   white-space: nowrap;
 
+  & + &{
+    margin-left: 5px;
+  }
+
   &--default {
     background-color: $btn-default-color;
     color: $btn-default-content-color;
 
-    // &:hover,
-    // &:focus {
-    //   background-color: $btn-default-focus-color;
-    // }
+    &:hover,
+    &:focus {
+      background-color: $btn-default-focus-color;
+    }
   }
 
   &--primary {

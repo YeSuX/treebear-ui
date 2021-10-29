@@ -1,6 +1,5 @@
 <template>
   <button
-    v-ripple="{ disabled: disabled || !ripple }"
     class="sx-button"
     :class="[
       `sx-button--${size}`,
@@ -22,11 +21,9 @@
 
 <script lang="ts">
 import { props } from "./props";
-import Ripple from "../ripple";
 
 export default {
   name: "Button",
-  directives: { Ripple },
   props,
   created() {
     console.log();
