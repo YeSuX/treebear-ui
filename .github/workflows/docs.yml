@@ -40,8 +40,8 @@ jobs:
         run: yarn --frozen-lockfile
 
       # 运行构建脚本
-      - name: Build VuePress site
-        run: yarn build
+      - name: Build storybook
+        run: yarn build-storybook
 
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
@@ -51,7 +51,7 @@ jobs:
           # 部署到 gh-pages 分支
           target_branch: gh-pages
           # 部署目录为 VuePress 的默认输出目录
-          build_dir: docs/.vuepress/dist
+          build_dir: storybook-static
         env:
           # @see https://docs.github.com/cn/actions/reference/authentication-in-a-workflow#about-the-github_token-secret
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
