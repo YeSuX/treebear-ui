@@ -1,5 +1,5 @@
 Arguments: 
-  D:\software\nodejs\node.exe D:\software\nodejs\node_modules\yarn\bin\yarn.js remove reset-css
+  D:\software\nodejs\node.exe D:\software\nodejs\node_modules\yarn\bin\yarn.js add -- sass-loader -D
 
 PATH: 
   C:\ProgramData\Oracle\Java\javapath;C:\mysql\mysql80\bin;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;D:\maven\apache-maven-36\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\Java\jdk-14.0.1\bin;C:\Program Files\Java\jdk1.8.0_161\bin;C:\Program Files\Java\jdk1.6.0_43\bin;C:\Windows\System32;C:\windows\system32;D:\software\nvm;D:\software\nodejs;D:\Git\cmd;C:\Program Files\TortoiseSVN\bin;C:\Python27;D:\software\python\python37\Scripts\;D:\software\python\python37\;D:\software\Ruby27-x64\bin;C:\Users\yesuxiong\AppData\Local\Microsoft\WindowsApps;D:\Microsoft VS Code\bin;D:\IntelliJ IDEA Community Edition 2020.1.3\bin;;D:\software\IntelliJ IDEA 2020.2.1\bin;;D:\npm;C:\Windows\System32;C:\Users\yesuxiong\AppData\Roaming\npm;D:\software\nvm;D:\software\nodejs
@@ -14,7 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'D:\_project\Joy_garden\treebear-ui\node_modules\esbuild\esbuild.exe'
+  Error: https://registry.yarnpkg.com/-D: Not found
+      at Request.params.callback [as _callback] (D:\software\nvm\v14.16.1\node_modules\yarn\lib\cli.js:66988:18)
+      at Request.self.callback (D:\software\nvm\v14.16.1\node_modules\yarn\lib\cli.js:140662:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (D:\software\nvm\v14.16.1\node_modules\yarn\lib\cli.js:141634:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (D:\software\nvm\v14.16.1\node_modules\yarn\lib\cli.js:141556:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
 
 npm manifest: 
   {
@@ -24,8 +34,8 @@ npm manifest:
       "dev": "vite",
       "build": "vue-tsc --noEmit && vite build",
       "serve": "vite preview",
-      "storybook": "start-storybook -p 6006",
-      "build-storybook": "build-storybook"
+      "storybook": "start-storybook -c ./.storybook/ -p 6006",
+      "build-storybook": "build-storybook -c ./.storybook/"
     },
     "dependencies": {
       "vue": "^3.2.13"
@@ -7221,11 +7231,6 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
     integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
   
-  normalize.css@^8.0.1:
-    version "8.0.1"
-    resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
-    integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
-  
   npm-run-path@^2.0.0:
     version "2.0.2"
     resolved "https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-2.0.2.tgz#35a9232dfa35d7067b4cb2ddf2357b1871536c5f"
@@ -8582,11 +8587,6 @@ Lockfile:
     version "0.5.4"
     resolved "https://registry.yarnpkg.com/request-light/-/request-light-0.5.4.tgz#497a98c6d8ae49536417a5e2d7f383b934f3e38c"
     integrity sha512-t3566CMweOFlUk7Y1DJMu5OrtpoZEb6aSTsLQVT3wtrIEJ5NhcY9G/Oqxvjllzl4a15zXfFlcr9q40LbLVQJqw==
-  
-  reset-css@^5.0.1:
-    version "5.0.1"
-    resolved "https://registry.yarnpkg.com/reset-css/-/reset-css-5.0.1.tgz#1ced0604fdb6836567e40d82de3537afaf3bb4c8"
-    integrity sha512-VyuJdNFfp5x/W6e5wauJM59C02Vs0P22sxzZGhQMPaqu/NGTeFxlBFOOw3eq9vQd19gIDdZp7zi89ylyKOJ33Q==
   
   resolve-from@^4.0.0:
     version "4.0.0"
