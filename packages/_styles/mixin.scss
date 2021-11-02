@@ -1,0 +1,9 @@
+@mixin font-size-regular {
+    font-size: $font-size-regular;
+    line-height: 20px;
+    font-family: $font-family-regular;
+}
+
+@mixin box-sizing {
+    box-sizing: border-box;
+}

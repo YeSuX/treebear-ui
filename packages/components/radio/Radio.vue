@@ -1,7 +1,7 @@
 <template>
-  <label>
+  <label class="sx-radio">
     <RadioInner></RadioInner>
-    <span class="sx-radio-addon">单选</span>
+    <span class="sx-radio-addon"><slot></slot></span>
   </label>
 </template>
 
@@ -13,8 +13,11 @@ export default defineComponent({
   components: {
     [RadioInner.name]: RadioInner,
   },
+  setup(props) {},
 });
 </script>
 
-<style>
+<style lang="scss">
+@import "../../_styles/main.scss";
+@import "./Radio.scss";
 </style>
