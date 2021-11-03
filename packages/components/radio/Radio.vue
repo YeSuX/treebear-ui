@@ -59,10 +59,14 @@ export default defineComponent({
     };
 
     const handleClick = (e: Event) => {
-      const { uncheckedValue, checkedValue,mode } = props;
-console.log('value',mode === 'advanced'?('123'):checkedValue);
-
-      change(mode === 'advanced'?(value.value === checkedValue?uncheckedValue:checkedValue):checkedValue);
+      const { uncheckedValue, checkedValue, mode } = props;
+      change(
+        mode === "advanced"
+          ? value.value === checkedValue
+            ? uncheckedValue
+            : checkedValue
+          : checkedValue
+      );
     };
 
     return {
