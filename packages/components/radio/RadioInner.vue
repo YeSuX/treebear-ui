@@ -1,11 +1,11 @@
 <template>
   <span
     class="sx-radio-inner"
-    :class="[checkValue ? 'sx-radio-inner-checked' : null]"
+    :class="[checked ? 'sx-radio-inner-checked' : null]"
   >
     <input type="radio" @click="handleClick" />
     <span class="sx-radio-inner-display">
-      <span v-if="checkValue" class="sx-icon sx-icon-radio">
+      <span v-if="checked" class="sx-icon sx-icon-radio">
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -24,24 +24,40 @@
 
 <script lang="ts">
 import { props } from "./props";
-import { defineComponent, ref } from "vue";
+import { computed, defineComponent, ref, watch } from "vue";
 import { Ref, ComputedRef } from "vue";
 
 export default defineComponent({
   name: "RadioInner",
   props,
-  setup(props) {
-    const checkValue: Ref<any> = ref(false);
-    const handleClick = (e: Event) => {
-      const {modelValue} = props
-      checkValue.value = true;
-      console.log('props',modelValue);
+  setup(props, { emit }) {
+    const value: Ref<any> = ref(false);
+    const checked: ComputedRef<boolean> = computed(() => value.value === props.checkedValue);
+
+    watch(
+      () => props.modelValue,
+      (newValue) => {
+        value.value = newValue;
+      },
+      { immediate: true }
+    );
+
+    const change = (changedValue: any) => {
+      value.value = changedValue;
       
+      props["update:modelValue"]?.(value.value);
+      console.log("modelValue",props.modelValue);
+    };
+
+    const handleClick = (e: Event) => {
+      const { uncheckedValue, checkedValue } = props;
+      change(checked.value ? uncheckedValue : checkedValue);
+      console.log("checked", checked.value);
     };
 
     return {
       handleClick,
-      checkValue,
+      checked,
     };
   },
 });
