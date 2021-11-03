@@ -1,9 +1,13 @@
 import type { PropType } from 'vue'
 
+const modeValidator = (mode: string): boolean => {
+    return ['normal', 'advanced'].includes(mode)
+}
+
 export const props = {
     modelValue: {
         type: Boolean,
-        default: true
+        default: false
     },
     checkedValue: {
         type: Boolean,
@@ -13,7 +17,15 @@ export const props = {
         type: Boolean,
         default: false,
     },
-    'update:modelValue': {
-        type: Function as PropType<(value: any) => void>
+    extra: {
+        type: String
+    },
+    disabled: {
+        type: Boolean
+    },
+    mode: {
+        type: String as PropType<'normal' | 'advanced'>,
+        default: 'normal',
+        validator: modeValidator
     }
 }
