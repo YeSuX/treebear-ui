@@ -1,0 +1,39 @@
+@import '../../_styles//keyframes/rotate.scss';
+
+.sx-button {
+    &.sx-button-with-icon {
+        display: inline-flex;
+        align-items: center;
+
+        .sx-button-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &.sx-button-loading {
+        pointer-events: none;
+        cursor: not-allowed;
+
+        .sx-button-content {
+
+            &>svg {
+                width: 16px;
+                height: 16px;
+                animation: .6s linear infinite sx-animation-rotate;
+            }
+        }
+    }
+
+    &-content {
+
+        &-left {
+            margin-right: $spacing-button_iconOnly_content-marginRight;
+        }
+
+        &-right {
+            margin-left: $spacing-button_iconOnly_content-marginLeft;
+        }
+    }
+}

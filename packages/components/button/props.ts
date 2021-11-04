@@ -1,52 +1,39 @@
 import type { PropType } from 'vue'
 
-function typeValidator(type: string): boolean {
-  return ['default', 'primary', 'secondary', 'accent', 'info', 'success', 'warning', 'error', 'ghost'].includes(type)
+const typeValidator = (type) => {
+  return ['primary', 'secondary', 'tertiary', 'warning', 'danger'].includes(type)
+}
+const themeValidator = (theme) => {
+  return ['light', 'solid', 'borderless'].includes(theme)
 }
 
-function sizeValidator(size: string): boolean {
-  return ['mini', 'small', 'normal', 'large'].includes(size)
+const sizeValidator = (size) => {
+  return ['large', 'default', 'small'].includes(size)
 }
 
 export const props = {
   type: {
-    type: String as PropType<'default' | 'primary' | 'info' | 'success' | 'warning' | 'error'|'ghost'>,
-    default: 'default',
-    validator: typeValidator,
+    type: String as PropType<'primary' | 'secondary' | 'tertiary' | 'warning' | 'danger'>,
+    default: 'primary',
+    validator: typeValidator
+  },
+  theme: {
+    type: String as PropType<'light' | 'solid' | 'borderless'>,
+    default: 'light',
+    validator: themeValidator
   },
   size: {
-    type: String as PropType<'normal' | 'mini' | 'small' | 'large'>,
-    default: 'normal',
-    validator: sizeValidator,
-  },
-  color: {
-    type: String
-  },
-  textColor: {
-    type: String
+    type: String as PropType<'large' | 'default' | 'small'>,
+    default: 'default',
+    validator: sizeValidator
   },
   block: {
-    type: Boolean,
-    default: false
-  },
-  round: {
-    type: Boolean,
-    default: false
-  },
-  circle: {
-    type: Boolean,
-    default: false
-  },
-  bordered: {
-    type: Boolean,
-    default: false
+    type: Boolean
   },
   disabled: {
-    type: Boolean,
-    default: false
+    type: Boolean
   },
-  ripple: {
-    type: Boolean,
-    default: true
+  loading: {
+    type: Boolean
   }
 }
