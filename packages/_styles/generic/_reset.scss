@@ -119,9 +119,9 @@ input {
 }
 
 /* Replace pointer cursor in disabled elements */
-[disabled] {
-  cursor: default;
-}
+// [disabled] {
+//   cursor: default;
+// }
 
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
@@ -165,14 +165,13 @@ select {
 }
 
 /* Apply cursor pointer to button elements */
-button,
-[type="button"],
-[type="reset"],
-[type="submit"],
-[role="button"] {
-  cursor: pointer;
-  color: inherit;
-}
+// button,
+// [type="button"],
+// [type="reset"],
+// [type="submit"],
+// [role="button"] {
+//   cursor: pointer;
+// }
 
 /* Remove inner padding and border in Firefox 4+ */
 button::-moz-focus-inner,
@@ -276,6 +275,6 @@ progress {
 }
 
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
-[aria-disabled="true"] {
-  cursor: default;
-}
+// [aria-disabled="true"] {
+//   cursor: default;
+// }

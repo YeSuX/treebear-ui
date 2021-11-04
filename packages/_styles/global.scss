@@ -14,13 +14,13 @@ body, body[theme-mode="dark"] .sx-always-light {
     --sx-color-primary-light-hover: rgba(var(--sx-blue-1), 1); // 浅版主要颜色悬浮态
     --sx-color-primary-light-active: rgba(var(--sx-blue-2), 1); // 浅版主要颜色激活态
 
-    --sx-color-secondary: rgba(var(--sx-blue-5), 1); // 次要颜色。强调作用次于主要颜色，但仍然具有强调作用。
-    --sx-color-secondary-hover: rgba(var(--sx-blue-6), 1); // 次要颜色悬浮态
-    --sx-color-secondary-active: rgba(var(--sx-blue-7), 1); // 次要颜色激活态
-    --sx-color-secondary-disabled: rgba(var(--sx-blue-2), 1); // 次要颜色禁用态
-    --sx-color-secondary-light-default: rgba(var(--sx-blue-0), 1); // 浅版次要颜色（多用于背景）。强调作用次于主要颜色，但仍然具有强调作用。
-    --sx-color-secondary-light-hover: rgba(var(--sx-blue-1), 1); // 浅版次要颜色悬浮态
-    --sx-color-secondary-light-active: rgba(var(--sx-blue-2), 1); // 浅版次要颜色激活态
+    --sx-color-secondary: rgba(var(--sx-violet-5), 1); // 次要颜色。强调作用次于主要颜色，但仍然具有强调作用。
+    --sx-color-secondary-hover: rgba(var(--sx-violet-6), 1); // 次要颜色悬浮态
+    --sx-color-secondary-active: rgba(var(--sx-violet-7), 1); // 次要颜色激活态
+    --sx-color-secondary-disabled: rgba(var(--sx-violet-2), 1); // 次要颜色禁用态
+    --sx-color-secondary-light-default: rgba(var(--sx-violet-0), 1); // 浅版次要颜色（多用于背景）。强调作用次于主要颜色，但仍然具有强调作用。
+    --sx-color-secondary-light-hover: rgba(var(--sx-violet-1), 1); // 浅版次要颜色悬浮态
+    --sx-color-secondary-light-active: rgba(var(--sx-violet-2), 1); // 浅版次要颜色激活态
 
     --sx-color-tertiary: rgba(var(--sx-grey-5), 1); // 第三颜色，可以在页面上多次使用
     --sx-color-tertiary-hover: rgba(var(--sx-grey-6), 1); // 第三颜色悬浮态
