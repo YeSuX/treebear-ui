@@ -1,7 +1,7 @@
 <template>
   <button
     class="sx-button"
-    type="button"
+    :type="htmlType"
     :class="[
       `sx-button-${type}`,
       `sx-button-${theme}`,

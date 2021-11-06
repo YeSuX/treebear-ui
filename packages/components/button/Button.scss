@@ -23,7 +23,8 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  &-primary {
+  &-primary,
+  &-group-primary>& {
     background-color: $color-button_primary-bg-default;
     color: $color-button_primary-text-default;
 
@@ -41,7 +42,8 @@
     }
   }
 
-  &-secondary {
+  &-secondary,
+  &-group-secondary>& {
     background-color: $color-button_secondary-bg-default;
     outline-color: $color-button_secondary-border-default;
     color: $color-button_secondary-text-default;
@@ -60,7 +62,8 @@
     }
   }
 
-  &-tertiary {
+  &-tertiary,
+  &-group-tertiary>& {
     background-color: $color-button_tertiary-bg-default;
     color: $color-button_tertiary-text-default;
 
@@ -78,7 +81,8 @@
     }
   }
 
-  &-danger {
+  &-danger,
+  &-group-danger>& {
     background-color: $color-button_danger-bg-default;
     color: $color-button_danger-text-default;
 
@@ -96,7 +100,8 @@
     }
   }
 
-  &-warning {
+  &-warning,
+  &-group-warning>& {
     background-color: $color-button_warning-bg-default;
     color: $color-button_warning-text-default;
 
@@ -114,7 +119,8 @@
     }
   }
 
-  &-light {
+  &-light,
+  &-group-light>& {
     background-color: $color-button_light-bg-default;
 
     &:not(.sx-button-disabled):hover {
@@ -126,7 +132,8 @@
     }
   }
 
-  &-borderless {
+  &-borderless,
+  &-group-borderless>& {
     background-color: transparent;
 
     &:not(.sx-button-disabled):hover {
@@ -138,7 +145,8 @@
     }
   }
 
-  &-size-small {
+  &-size-small,
+  &-group-small>& {
     height: $height-button_small;
     padding-top: $spacing-button_small-paddingTop;
     padding-bottom: $spacing-button_small-paddingBottom;
@@ -146,7 +154,8 @@
     padding-right: $spacing-button_small-paddingRight;
   }
 
-  &-size-large {
+  &-size-large,
+  &-group-large>& {
     height: $height-button_large;
     padding-top: $spacing-button_large-paddingTop;
     padding-bottom: $spacing-button_large-paddingBottom;
@@ -158,18 +167,65 @@
     width: 100%;
   }
 
-  &-disabled {
+  &-disabled,
+  &-group-disabled>& {
     color: $color-button_disabled_solid-text-default;
     background-color: $color-button_disabled-bg-default;
+
     &:not(.sx-button-borderless):not(.sx-button-light):hover {
-        color: $color-button_disabled-text-hover;
-        background-color: $color-button_disabled-bg-hover;
+      color: $color-button_disabled-text-hover;
+      background-color: $color-button_disabled-bg-hover;
     }
+
     cursor: not-allowed;
 
     &.sx-button-light,
     &.sx-button-borderless {
-        color: $color-button_disabled-text-default;
+      color: $color-button_disabled-text-default;
     }
-}
+  }
+
+  &-group {
+    &>.sx-button {
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+      border-radius: 0;
+
+      .sx-button-content {
+        padding-left: $spacing-button_default-paddingLeft;
+        padding-right: $spacing-button_default-paddingRight;
+      }
+
+      &-size-large {
+        .sx-button-content {
+          padding-left: $spacing-button_large-paddingLeft;
+          padding-right: $spacing-button_large-paddingRight;
+        }
+      }
+
+      &-size-small {
+        .sx-button-content {
+          padding-left: $spacing-button_small-paddingLeft;
+          padding-right: $spacing-button_small-paddingRight;
+        }
+      }
+
+      &:first-child {
+        border-top-left-radius: $radius-button_group;
+        border-bottom-left-radius: $radius-button_group;
+      }
+
+      &:not(:last-child) {
+        .sx-button-content {
+          border-right: $width-button_group-border $color-button_group-border-default solid;
+        }
+      }
+
+      &:last-child {
+        border-top-right-radius: $radius-button_group;
+        border-bottom-right-radius: $radius-button_group;
+      }
+    }
+  }
 }

@@ -1,8 +1,9 @@
+// @ts-ignore
 import SxRadio from '../Radio.vue';
 import { ref } from 'vue'
 
 export default {
-  title: '单选框 Radio',
+  title: '输入类/单选框 Radio',
   component: SxRadio
 }
 
@@ -38,7 +39,7 @@ const ModeTemplate = (args) => ({
   v-model="value"
   mode="advanced"
 >
-  允许取消选择
+  允许取消选择--{{value}}
 </sx-Radio>`,
   setup() {
     const value = ref(false);

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2251615f-def1-4b3f-abf6-61fd3d813fc7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/components/button/_story/button.stories.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.storybook/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/.storybook/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/note/todo.md" beforeDir="false" afterPath="$PROJECT_DIR$/note/todo.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/button/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/button/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/button/_story/Button.stories.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/button/_story/Button.stories.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/components/button/props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/components/button/props.ts" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="20XBs3eRTUWzfgkG4TU00a1sQwV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="D:\_project\Joy_garden\treebear-ui\node_modules\prettier" />
+    <property name="ts.external.directory.path" value="D:\_project\Joy_garden\treebear-ui\node_modules\typescript\lib" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="storybook" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="storybook" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.storybook" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2251615f-def1-4b3f-abf6-61fd3d813fc7" name="Default Changelist" comment="" />
+      <created>1636181254660</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636181254660</updated>
+      <workItem from="1636181257586" duration="2011000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

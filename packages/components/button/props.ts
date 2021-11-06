@@ -1,39 +1,51 @@
-import type { PropType } from 'vue'
+import type { PropType } from "vue";
 
 const typeValidator = (type) => {
-  return ['primary', 'secondary', 'tertiary', 'warning', 'danger'].includes(type)
-}
+  return ["primary", "secondary", "tertiary", "warning", "danger"].includes(
+    type
+  );
+};
 const themeValidator = (theme) => {
-  return ['light', 'solid', 'borderless'].includes(theme)
-}
+  return ["light", "solid", "borderless"].includes(theme);
+};
 
 const sizeValidator = (size) => {
-  return ['large', 'default', 'small'].includes(size)
-}
+  return ["large", "default", "small"].includes(size);
+};
 
+const htmlTypeValidator = (htmlType) => {
+  return ["button", "reset", "submit"].includes(htmlType);
+};
 export const props = {
   type: {
-    type: String as PropType<'primary' | 'secondary' | 'tertiary' | 'warning' | 'danger'>,
-    default: 'primary',
-    validator: typeValidator
+    type: String as PropType<
+      "primary" | "secondary" | "tertiary" | "warning" | "danger"
+    >,
+    default: "primary",
+    validator: typeValidator,
   },
   theme: {
-    type: String as PropType<'light' | 'solid' | 'borderless'>,
-    default: 'light',
-    validator: themeValidator
+    type: String as PropType<"light" | "solid" | "borderless">,
+    default: "light",
+    validator: themeValidator,
   },
   size: {
-    type: String as PropType<'large' | 'default' | 'small'>,
-    default: 'default',
-    validator: sizeValidator
+    type: String as PropType<"large" | "default" | "small">,
+    default: "default",
+    validator: sizeValidator,
   },
   block: {
-    type: Boolean
+    type: Boolean,
   },
   disabled: {
-    type: Boolean
+    type: Boolean,
   },
   loading: {
-    type: Boolean
-  }
-}
+    type: Boolean,
+  },
+  htmlType: {
+    type: String as PropType<"button" | "reset" | "submit">,
+    default: "button",
+    validator: htmlTypeValidator,
+  },
+};
