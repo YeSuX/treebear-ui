@@ -7,6 +7,14 @@ export default {
   component: SxButton,
 };
 
+const baseTemplate = (args) => ({
+  components: { SxButton },
+  setup() {
+    return { args };
+  },
+  template: `<sx-Button>基本按钮</sx-Button>`,
+});
+
 const typeTemplate = (args) => ({
   components: { SxButton },
   setup() {
@@ -177,11 +185,6 @@ const groupThemeTemplate = (args) => ({
               <sx-Button>查询</sx-Button>
               <sx-Button>剪切</sx-Button>
             </sx-Button-Group>
-            <sx-Button-Group theme="solid" class="mr-2">
-              <sx-Button>拷贝</sx-Button>
-              <sx-Button>查询</sx-Button>
-              <sx-Button>剪切</sx-Button>
-            </sx-Button-Group>
             <sx-Button-Group theme="borderless" class="mr-2">
               <sx-Button>拷贝</sx-Button>
               <sx-Button>查询</sx-Button>
@@ -189,6 +192,8 @@ const groupThemeTemplate = (args) => ({
             </sx-Button-Group>
             </div>`
 })
+
+export const 基本按钮 = baseTemplate.bind({});
 
 export const 按钮类型 = typeTemplate.bind({});
 
