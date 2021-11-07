@@ -4,6 +4,10 @@ const modeValidator = (mode: string): boolean => {
     return ['normal', 'advanced'].includes(mode)
 }
 
+const directionValidator = (direction: string): boolean => {
+    return ['vertical', 'horizontal'].includes(direction)
+}
+
 export const props = {
     modelValue: {
         type: Boolean,
@@ -27,5 +31,10 @@ export const props = {
         type: String as PropType<'normal' | 'advanced'>,
         default: 'normal',
         validator: modeValidator
+    },
+    direction: {
+        type: String as PropType<'vertical' | 'horizontal'>,
+        default: 'horizontal',
+        validator: directionValidator
     }
 }

@@ -28,8 +28,9 @@
             background: $color-radio_default-bg-hover;
             border: solid $width-radio_hover-border $color-radio_default-border-hover;
         }
-        .sx-radio-inner-checked{
-            .sx-radio-inner-display{
+
+        .sx-radio-inner-checked {
+            .sx-radio-inner-display {
                 background: $color-radio_primary-bg-hover;
             }
         }
@@ -40,8 +41,8 @@
             background: $color-radio_default-bg-active;
         }
 
-        .sx-radio-inner-checked{
-            .sx-radio-inner-display{
+        .sx-radio-inner-checked {
+            .sx-radio-inner-display {
                 background: $color-radio_primary-bg-hover;
             }
         }
@@ -120,8 +121,10 @@
         box-sizing: border-box;
     }
 
-    &-disabled{
-        &,&:hover{
+    &-disabled {
+
+        &,
+        &:hover {
             cursor: not-allowed;
         }
 
@@ -171,6 +174,36 @@
                 background: $color-radio_checked-bg-disabled;
             }
         }
+    }
+}
+
+.sx-radioGroup {
+    @include font-size-regular;
+
+    &-vertical {
+        .sx-radio {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        .sx-radio {
+            display: block;
+            margin-bottom: $spacing-radio_group_vertical-marginBottom;
+
+        }
+    }
+
+    &-horizontal {
+        .sx-radio {
+            margin-right: $spacing-radio_group_horizontal-marginRight;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        display: inline-block;
     }
 }
 
