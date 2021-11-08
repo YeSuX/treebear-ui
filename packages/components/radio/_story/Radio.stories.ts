@@ -51,15 +51,31 @@ const modeTemplate = (args) => ({
 const groupTemplate = (args) => ({
   components: { SxRadio,SxRadioGroup },
   template: `
-  <sx-RadioGroup>
-  <sx-Radio>A</sx-Radio>
-  <sx-Radio>B</sx-Radio>
-  <sx-Radio>C</sx-Radio>
-  <sx-Radio>D</sx-Radio>
+  <sx-RadioGroup v-model="value">
+  <sx-Radio label=1>A</sx-Radio>
+  <sx-Radio label=2>B</sx-Radio>
+  <sx-Radio label=3>C</sx-Radio>
+  <sx-Radio label=4>D</sx-Radio>
   </sx-RadioGroup>
   `,
   setup() {
-    const value = ref(false);
+    const value = ref("1");
+    return { value };
+  }
+})
+
+const directionTemplate = (args) => ({
+  components: { SxRadio,SxRadioGroup },
+  template: `
+  <sx-RadioGroup direction="vertical" v-model="value">
+  <sx-Radio label=1>A</sx-Radio>
+  <sx-Radio label=2>B</sx-Radio>
+  <sx-Radio label=3>C</sx-Radio>
+  <sx-Radio label=4>D</sx-Radio>
+  </sx-RadioGroup>
+  `,
+  setup() {
+    const value = ref("1");
     return { value };
   }
 })
@@ -72,4 +88,7 @@ export const 禁用 = disabledTemplate.bind({});
 
 export const 高级模式 = modeTemplate.bind({});
 
-export const 单选组合 = groupTemplate.bind({});
+export const 单选组合_开发ing = groupTemplate.bind({});
+
+export const 垂直排列_开发ing = directionTemplate.bind({});
+
