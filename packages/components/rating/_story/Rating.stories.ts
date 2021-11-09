@@ -3,7 +3,7 @@ import SxRating from '../Rating.vue';
 import { ref } from 'vue'
 
 export default {
-  title: '输入类/评分 Rating',
+  title: '2_输入类/评分 Rating',
   component: SxRating
 }
 
