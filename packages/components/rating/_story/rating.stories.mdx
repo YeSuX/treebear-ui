@@ -3,3 +3,22 @@ import { Meta } from '@storybook/addon-docs';
 <Meta title="输入类/评分 Rating/API 参考" />
 
 ## 评分 Rating
+
+### props
+
+| 属性            | 说明                                                         | 类型   | 默认值                                   |
+| --------------- | ------------------------------------------------------------ | ------ | ---------------------------------------- |
+| value / v-model | 默认值                                                       | number | 0                                        |
+| max             | 最大分值                                                     | number | 5                                        |
+| disabled        | 只读，无法进行交互                                           | bool   | false                                    |
+| allowHalf       | 是否允许半选                                                 | bool   | false                                    |
+| allowClear      | 是否允许再次点击后清除                                       | bool   | false                                    |
+| character       | 自定义字符                                                   |        |                                          |
+| showText        | 是否显示辅助文字，若为真，则会从 texts 数组中选取当前分数对应的文字内容 | bool   | false                                    |
+| texts           | 辅助文字数组                                                 | array  | ['极差', '失望', '一般', '满意', '惊喜'] |
+
+### events
+
+| 事件名称 | 说明           | 回调参数     |
+| -------- | -------------- | ------------ |
+| change   | 分值改变时触发 | 改变后的分值 |

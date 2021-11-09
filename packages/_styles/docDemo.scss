@@ -1,14 +1,28 @@
+//!!!!待开发，但必需的样式
+.sx-icon {
+    display: inline-block;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    fill: currentColor;
+}
+
+//-------------------------
+
 .btn-margin-right {
+
     & .sx-button,
     &.sx-button {
         margin-right: 8px;
     }
 }
 
-.mb-2{
+.mb-2 {
     margin-bottom: 8px;
 }
 
-.mr-2{
+.mr-2 {
     margin-right: 8px;
 }
