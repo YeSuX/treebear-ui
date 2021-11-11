@@ -4,7 +4,7 @@ import SxRadioGroup from '../RadioGroup.vue';
 import { ref } from 'vue'
 
 export default {
-  title: '2_输入类/单选框 Radio',
+  title: '输入类/单选框 Radio',
   component: SxRadio
 }
 

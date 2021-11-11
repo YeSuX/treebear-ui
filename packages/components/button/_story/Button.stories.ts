@@ -3,7 +3,7 @@ import SxButton from '../Button.vue';
 import SxButtonGroup from '../ButtonGroup.vue';
 
 export default {
-  title: '2_输入类/按钮 Button',
+  title: '输入类/按钮 Button',
   component: SxButton,
 };
 

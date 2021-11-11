@@ -3,7 +3,7 @@ import SxSwitch from '../Switch.vue';
 import { ref } from 'vue'
 
 export default {
-  title: '2_输入类/开关 Switch',
+  title: '输入类/开关 Switch',
   component: SxSwitch
 }
 
