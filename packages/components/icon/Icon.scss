@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+.sx-icon {
+  display: inline-block;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  text-rendering: optimizeLegibility;
+  fill: currentColor;
+}
+
+.sx-icon-extra-small {
+  width: $width-icon_extra_small;
+  height: $width-icon_extra_small;
+}
+
+.sx-icon-small {
+  width: $width-icon_small;
+  height: $width-icon_small;
+}
+
+.sx-icon-default {
+  width: $width-icon_medium;
+  height: $width-icon_medium;
+}
+
+.sx-icon-large {
+  width: $width-icon_large;
+  height: $width-icon_large;
+}
+
+.sx-icon-extra-large {
+  width: $width-icon_extra_large;
+  height: $width-icon_extra_large;
+}
+
+.sx-icon-spinning {
+  animation: $motion-icon_spin-animationDuration linear infinite sx-icon-animation-rotate;
+}
+
+@keyframes sx-icon-animation-rotate {
+  from {
+      transform: rotate(0);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}

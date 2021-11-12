@@ -1,7 +1,9 @@
 <template>
-  <svg>
-    <use :xlink:href="iconName" />
-  </svg>
+  <span class="sx-icon" :class="[spin ? 'sx-icon-spinning' : null]" :style="{fill:color}">
+    <svg :class="[size ? `sx-icon-${size}` : null]">
+      <use :xlink:href="iconName" />
+    </svg>
+  </span>
 </template>
 <script lang="ts">
 import { computed, ComputedRef, defineComponent } from "vue";
@@ -14,8 +16,10 @@ export default defineComponent({
     const iconName: ComputedRef<String> = computed(() => {
       return `#sx-icon-${props.name}`;
     });
-    // console.log('hf',hf);
     return { iconName };
   },
 });
 </script>
+<style lang="scss">
+@import "./Icon.scss";
+</style>
