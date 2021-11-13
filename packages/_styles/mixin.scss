@@ -52,3 +52,9 @@
     line-height: 20px;
     font-family: $font-family-regular;
 }
+
+//spin 
+@mixin size($num) {
+    width: $num;
+    height: $num;
+}

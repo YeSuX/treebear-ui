@@ -1,0 +1,75 @@
+@import './variabled';
+
+.sx-spin {
+  position: relative;
+  display: inline-block;
+  @include size($width-spin_middle);
+
+  &-wrapper {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    transform: $motion-spin_wrapper-translate;
+    top: $spacing-spin_wrapper-top;
+    color: $color-spin-bg;
+
+    &>svg {
+      animation: $motion-spin_wrapper_svg-animationDuration linear infinite sx-animation-rotate;
+      @include size($width-spin_middle);
+    }
+  }
+
+  &-children {
+    opacity: $opacity-spin_children;
+    user-select: none;
+  }
+
+  &-block {
+    display: block;
+
+    // 添加一个遮罩解决嵌套 Spin 穿透问题
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .sx-spin-wrapper {
+      display: block;
+    }
+
+    &.sx-spin {
+      height: auto;
+      width: auto;
+    }
+  }
+}
+
+.sx-spin-small {
+  @include size($width-spin_small);
+
+  &>.sx-spin-wrapper svg {
+    @include size($width-spin_small);
+  }
+}
+
+.sx-spin-middle {
+  @include size($width-spin_middle);
+
+  &>.sx-spin-wrapper svg {
+    @include size($width-spin_middle);
+  }
+}
+
+.sx-spin-large {
+  @include size($width-spin_large);
+
+  &>.sx-spin-wrapper svg {
+    @include size($width-spin_large);
+  }
+}
