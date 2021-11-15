@@ -27,6 +27,19 @@ const sizeTemplate = () => ({
   }
 })
 
+const colorTemplate = () => ({
+  components: { SxSpin },
+  template: `
+  <sx-Spin></sx-Spin>
+  <sx-Spin color="#9dbdc6"></sx-Spin>
+  <sx-Spin color="#ff3d2e"></sx-Spin>
+  <sx-Spin color="#daeaef"></sx-Spin>
+  <sx-Spin color="#272f32"></sx-Spin>
+  `,
+  setup() {
+  }
+})
+
 const tipTemplate = () => ({
   components: { SxSpin },
   template: `
@@ -77,6 +90,8 @@ const delayTemplate = () => ({
 
 export const 基本用法 = baseTemplate.bind({});
 
+export const 颜色 = colorTemplate.bind({});
+
 export const 尺寸 = sizeTemplate.bind({});
 
 export const 带文字的 = tipTemplate.bind({});
@@ -84,3 +99,4 @@ export const 带文字的 = tipTemplate.bind({});
 export const 自定义加载指示符 = indicatorTemplate.bind({});
 
 export const 延迟显示 = delayTemplate.bind({});
+

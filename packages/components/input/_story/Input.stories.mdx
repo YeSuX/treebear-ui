@@ -1,0 +1,32 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="输入类/输入框 Input/API 参考" />
+
+## input
+
+| 属性           | 说明                                                         | 类型          | 默认值    |
+| -------------- | ------------------------------------------------------------ | ------------- | --------- |
+| v-model/value  | 默认值                                                       | string/number |           |
+| size           | 输入框大小，large、default、small                            | string        | 'default' |
+| disabled       | 是否禁用，默认为false                                        | bool          | false     |
+| showClear      | 支持清除                                                     | bool          | false     |
+| mode           | 输入框的模式，可选值password                                 | string        |           |
+| validateStatus | 校验状态，可选值default、error、warning，默认default。仅影响展示样式 | string        | 'default' |
+| addonAfter     | 后置标签                                                     | vueNode       |           |
+| addonBefore    | 前置标签                                                     | vueNode       |           |
+| prefix         | 前缀                                                         | vueNode       |           |
+| suffix         | 后缀                                                         | vueNode       |           |
+
+## textArea
+
+| 属性            | 说明                                                  | 类型          | 默认值 |
+| --------------- | ----------------------------------------------------- | ------------- | ------ |
+| v-model/value   | 默认值                                                | string/number |        |
+| disabled        | 是否禁用，默认为false                                 | bool          | false  |
+| showClear       | 支持清除                                              | bool          | false  |
+| show-word-limit | 是否显示输入字数统计，只在 `type = "textarea"` 时有效 | bool          | false  |
+| maxlength       | 原生属性，最大输入长度                                | number        |        |
+| minlength       | 原生属性，最小输入长度                                | number        |        |
+
+
+

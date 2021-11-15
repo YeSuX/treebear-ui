@@ -5,7 +5,7 @@
     :class="[size ? `sx-spin-${size}` : null, tip ? 'sx-spin-block' : null]"
   >
     <div class="sx-spin-wrapper">
-      <sx-Icon :name="indicator" spin></sx-Icon>
+      <sx-Icon :color="color" :name="indicator" spin></sx-Icon>
       <div v-if="tip">{{ tip }}</div>
     </div>
     <div class="sx-spin-children">

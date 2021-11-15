@@ -53,6 +53,12 @@
     font-family: $font-family-regular;
 }
 
+@mixin font-size-header-6 {
+    font-size: $font-size-header-6;
+    line-height: 22px;
+    font-family: $font-family-regular;
+}
+
 //spin 
 @mixin size($num) {
     width: $num;

@@ -1,0 +1,88 @@
+@import './variables';
+
+.sx-input-wrapper {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+
+  @include shadow-0;
+  @include font-size-regular;
+  background-color: $color-input_default-bg-default;
+  border: $width-input_wrapper-border $color-input_default-border-default solid;
+  border-radius: $radius-input_wrapper;
+
+  width: 100%;
+  outline: none;
+  cursor: text;
+  box-sizing: border-box;
+  color: $color-input_default-text-default;
+
+  &-default {
+    height: $height-input_wrapper_default;
+    @include font-size-regular;
+    line-height: $height-input_default;
+  }
+
+  &-small {
+    height: $height-input_wrapper_small;
+    @include font-size-header-6;
+    line-height: $height-input_small;
+  }
+
+  &-large {
+    height: $height-input_wrapper_large;
+    @include font-size-header-6;
+    line-height: $height-input_large;
+  }
+
+  &:hover {
+    background-color: $color-input_default-bg-hover;
+  }
+
+  &-focus {
+    background-color: $color-input_default-bg-focus;
+    border: $color-input_default-border-focus solid $width-input_wrapper_focus-border;
+
+    &:hover {
+      background-color: $color-input_default-bg-focus;
+    }
+
+    &:active {
+      background-color: $color-input_default-bg-focus;
+    }
+  }
+
+  .sx-input {
+    border: none;
+    outline: none;
+    width: 100%;
+    color: inherit;
+    padding-left: $spacing-input-paddingLeft;
+    padding-right: $spacing-input-paddingRight;
+
+    background-color: transparent;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $color-input_placeholder-text-default;
+    }
+
+    &-large {
+      height: $height-input_large;
+      @include font-size-header-6;
+      line-height: $height-input_large;
+    }
+
+    &-small {
+      height: $height-input_small;
+      @include font-size-regular;
+      line-height: $height-input_small;
+    }
+
+    &-default {
+      height: $height-input_default;
+      @include font-size-regular;
+      line-height: $height-input_default;
+    }
+  }
+}

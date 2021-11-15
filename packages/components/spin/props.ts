@@ -20,5 +20,8 @@ export const props = {
   delay: {
     type: Number,
     default: 0
+  },
+  color: {
+    type: String
   }
 }
