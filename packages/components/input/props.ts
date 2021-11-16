@@ -19,5 +19,35 @@ export const props = {
   disabled: {
     type: Boolean,
     default: false
+  },
+  prefix: {
+    type: String,
+  },
+  suffix: {
+    type: String,
+  },
+  prefix_icon: {
+    type: String,
+  },
+  suffix_icon: {
+    type: String,
+  },
+  addonBefore: {
+    type: String
+  },
+  addonAfter: {
+    type: String
+  },
+  showClear: {
+    type: Boolean,
+    default: false
+  },
+  password: {
+    type: Boolean,
+    default: false
+  },
+  validateStatus: {
+    type: String,
+    default: 'default'
   }
 }
