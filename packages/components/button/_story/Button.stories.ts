@@ -104,6 +104,17 @@ const loadingTemplate = (args) => ({
             </div>`
 })
 
+const iconTemplate = (args) => ({
+  components: { SxButton },
+  setup() {
+    return { args };
+  },
+  template: `<div class="btn-margin-right">
+              <sx-Button icon="faceu_logo"></sx-Button>
+              <sx-Button icon="moon">夜间</sx-Button>
+            </div>`
+})
+
 const groupSizeTemplate = (args) => ({
   components: { SxButton,SxButtonGroup },
   setup() {
@@ -206,6 +217,8 @@ export const 块级按钮 = blockTemplate.bind({});
 export const 禁用状态 = disabledTemplate.bind({});
 
 export const 加载状态 = loadingTemplate.bind({});
+
+export const 图标按钮 = iconTemplate.bind({});
 
 export const 组合尺寸 = groupSizeTemplate.bind({});
 

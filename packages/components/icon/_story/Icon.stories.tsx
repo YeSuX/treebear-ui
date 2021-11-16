@@ -74,7 +74,7 @@ const totalTemplate = () => ({
   },
   template: `
   <div class="icon-item" style="display:inline-block;margin:10px;" v-for="(icon,key) in svgIcons" :key="key">
-    <sx-Icon @click="toCopy(icon)" :name="icon" color="blue" style="display:block;cursor:point;cursor: pointer;"></sx-Icon>
+    <sx-Icon @click="toCopy(icon)" :name="icon" color="blue" style="cursor:point;cursor: pointer;"></sx-Icon>
     <span :id="icon">{{icon}}</span>
   </div>
   `,

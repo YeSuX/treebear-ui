@@ -48,4 +48,7 @@ export const props = {
     default: "button",
     validator: htmlTypeValidator,
   },
+  icon: {
+    type: String
+  }
 };
