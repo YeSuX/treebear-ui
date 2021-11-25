@@ -11,12 +11,12 @@
     <slot></slot>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
-import { props } from "./props";
+import {props} from './prop'
 
 export default defineComponent({
-  name: "SxButtonGroup",
+  name: "sxButtonGroup",
   props,
   setup() {},
 });

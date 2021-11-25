@@ -13,13 +13,13 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { defineComponent, ref } from "vue";
-import sxIcon from "../icon/Icon.vue";
 import { props } from "./props";
+import sxIcon from '../icon/icon.vue'
 
 export default defineComponent({
-  name: "SxSpin",
+  name: "sxSpin",
   props,
   components: {
     sxIcon,
@@ -35,5 +35,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import "./Spin.scss";
+@import "./spin.scss";
 </style>

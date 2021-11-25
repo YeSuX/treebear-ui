@@ -23,7 +23,7 @@
       {{ prefix }}
     </div>
     <div v-if="prefix_icon" class="sx-input-prefix sx-input-prefix-icon">
-      <sx-Icon :name="prefix_icon"></sx-Icon>
+      <sx-icon :name="prefix_icon"></sx-icon>
     </div>
 
     <input
@@ -45,7 +45,7 @@
       {{ addonAfter }}
     </div>
     <div v-if="suffix_icon" class="sx-input-suffix sx-input-suffix-icon">
-      <sx-Icon :name="suffix_icon"></sx-Icon>
+      <sx-icon :name="suffix_icon"></sx-icon>
     </div>
     <div v-if="suffix" class="sx-input-suffix sx-input-suffix-text">
       {{ suffix }}
@@ -55,27 +55,27 @@
       class="sx-input-clearbtn"
       @mousedown="clearText"
     >
-      <sx-Icon name="clear"></sx-Icon>
+      <sx-icon name="clear"></sx-icon>
     </div>
     <div
       v-if="password && clearValue"
       class="sx-input-modebtn"
       @mousedown="passwordText"
     >
-      <sx-Icon :name="passwordValue ? 'eye_closed' : 'eye_opened'"></sx-Icon>
+      <sx-icon :name="passwordValue ? 'eye_closed' : 'eye_opened'"></sx-icon>
     </div>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { computed, defineComponent, ref, watch } from "vue";
 import { props } from "./props";
-import SxIcon from "../icon/Icon.vue";
+import sxIcon from "../icon/icon.vue";
 
 export default defineComponent({
-  name: "SxInput",
+  name: "sxInput",
   props,
   emits: ["update:modelValue"],
-  components: { SxIcon },
+  components: { sxIcon },
   setup(props, { emit }) {
     const value = ref("");
     const onFocus = ref(false);
@@ -134,5 +134,5 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
-@import "./Input.scss";
+@import "./input.scss";
 </style>

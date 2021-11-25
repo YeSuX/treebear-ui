@@ -24,7 +24,10 @@
         :aria-setsize="max"
         :tabIndex="0"
       >
-        <div class="sx-rating-star-first" :style="isHalf(key) ? `width:${width}%` : null">
+        <div
+          class="sx-rating-star-first"
+          :style="isHalf(key) ? `width:${width}%` : null"
+        >
           <span v-html="character"></span>
         </div>
         <div class="sx-rating-star-second">
@@ -35,13 +38,13 @@
     <span class="sx-rating-text" v-if="showText">{{ text }}</span>
   </ul>
 </template>
-<script lang="ts">
+<script>
 /**
  * 优化备忘
  * 1. 鼠标移入 加入节流渲染优化
  * 2. 半星选择 后续开发
  * */
-import { computed, ComputedRef, defineComponent, Ref, ref, watch } from "vue";
+import { defineComponent, ref, watch } from "vue";
 import { props } from "./props";
 
 export default defineComponent({
@@ -49,16 +52,16 @@ export default defineComponent({
   emits: ["update:modelValue", "change"],
   props,
   setup(props, { emit }) {
-    const value: Ref<any> = ref(0);
-    const currentValue: Ref<any> = ref(0);
-    const width: Ref<any> = ref(0);
-    const text: Ref<any> = ref("");
+    const value = ref(0);
+    const currentValue = ref(0);
+    const width = ref(0);
+    const text = ref("");
 
-    const isFull = (key: number) => {
+    const isFull = (key) => {
       return Math.floor(value.value) > key;
     };
 
-    const isHalf = (key: number) => {
+    const isHalf = (key) => {
       return Math.ceil(value.value) == key && props.allowHalf;
     };
 
@@ -73,11 +76,11 @@ export default defineComponent({
       { immediate: true }
     );
 
-    const getText = (key: number) => {
+    const getText = (key) => {
       text.value = props.texts[key];
     };
 
-    const onHover = (key: number) => {
+    const onHover = (key) => {
       if (props.disabled) {
         return;
       }
@@ -93,7 +96,7 @@ export default defineComponent({
       emit("update:modelValue", currentValue.value);
       emit("change", currentValue.value);
     };
-    const selectValue = (key: number) => {
+    const selectValue = (key) => {
       if (props.disabled) {
         return;
       }
@@ -123,6 +126,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import "../../_styles/main.scss";
-@import "./Rating.scss";
+@import "./rating.scss";
 </style>

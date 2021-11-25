@@ -13,7 +13,10 @@
     <div class="sx-switch-checked-text" v-if="checkedText && value && !loading">
       {{ checkedText }}
     </div>
-    <div class="sx-switch-unchecked-text" v-if="uncheckedText && !value && !loading">
+    <div
+      class="sx-switch-unchecked-text"
+      v-if="uncheckedText && !value && !loading"
+    >
       {{ uncheckedText }}
     </div>
     <input
@@ -24,18 +27,18 @@
     />
   </div>
 </template>
-<script lang="ts">
-import { defineComponent, ref, Ref, watch } from "vue";
+<script>
+import { defineComponent, ref, watch } from "vue";
 import { props } from "./props";
-import SxSpin from '../spin/Spin.vue'
+import sxSpin from "../spin/spin";
 
 export default defineComponent({
-  name: "SxSwitch",
+  name: "sxSwitch",
   props,
   emits: ["update:modelValue", "change"],
-  components:{SxSpin},
+  components: { sxSpin },
   setup(props, { emit }) {
-    const value: Ref<Boolean> = ref(false);
+    const value = ref(false);
 
     watch(
       () => props.modelValue,
@@ -61,5 +64,5 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import "./Switch.scss";
+@import "./switch.scss";
 </style>

@@ -27,16 +27,16 @@
     </div>
   </div>
 </template>
-<script lang="ts">
+<script>
 import { defineComponent, ref } from "vue";
-import SxButton from "../button/Button.vue";
-import SxIcon from "../icon/Icon.vue";
+import sxButton from "../button/button";
+import sxIcon from "../icon/icon.vue";
 import { props } from "./props";
 
 export default defineComponent({
-  name: "SxBanner",
+  name: "sxBanner",
   props,
-  components: { SxButton, SxIcon },
+  components: { sxButton, sxIcon },
   setup() {
     const showValue = ref(true);
 
@@ -49,5 +49,5 @@ export default defineComponent({
 });
 </script>
 <style lang="scss">
-@import "./Banner.scss";
+@import "./banner.scss";
 </style>

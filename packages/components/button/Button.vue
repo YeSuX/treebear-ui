@@ -14,7 +14,7 @@
     :disabled="disabled"
   >
     <span class="sx-button-content">
-      <sx-icon v-if="loading" name="spin" spin></sx-icon>
+      <sx-spin v-if="loading"></sx-spin>
       <sx-icon v-if="icon" :name="icon"></sx-icon>
       <span v-if="loading" class="sx-button-content-right">
         <slot></slot>
@@ -24,20 +24,20 @@
   </button>
 </template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from "vue";
-import { props } from "./props";
-import SxIcon from "../icon/Icon.vue";
+import { props } from "./prop";
+import sxSpin from "../spin/spin";
+import sxIcon from "../icon/icon";
 
 export default defineComponent({
-  name: "SxButton",
+  name: "sxButton",
   props,
-  components: { SxIcon },
+  components: { sxSpin, sxIcon },
   setup(props) {},
 });
 </script>
 
 <style lang="scss">
-@import "../../_styles/main.scss";
-@import "./Button.scss";
+@import "./button.scss";
 </style>

@@ -1,0 +1,192 @@
+@import "./_palette.scss";
+
+body, body[theme-mode="dark"] .sx-always-light {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    --sx-color-white: rgba(var(--sx-white), 1); // 浅色模式下深色背景内容Inverse
+    --sx-color-black: rgba(var(--sx-black), 1); // 深色模式下浅色背景内容Inverse
+
+    --sx-color-primary: rgba(var(--sx-blue-5), 1); // 主要颜色。仅在需要非常强调的情况下使用。
+    --sx-color-primary-hover: rgba(var(--sx-blue-6), 1); // 主要颜色悬浮态
+    --sx-color-primary-active: rgba(var(--sx-blue-7), 1); // 主要颜色激活态
+    --sx-color-primary-disabled: rgba(var(--sx-blue-2), 1); // 主要颜色禁用态
+    --sx-color-primary-light-default: rgba(var(--sx-blue-0), 1); // 浅版主要颜色（多用于背景）。仅在需要非常强调的情况下使用。
+    --sx-color-primary-light-hover: rgba(var(--sx-blue-1), 1); // 浅版主要颜色悬浮态
+    --sx-color-primary-light-active: rgba(var(--sx-blue-2), 1); // 浅版主要颜色激活态
+
+    --sx-color-secondary: rgba(var(--sx-violet-5), 1); // 次要颜色。强调作用次于主要颜色，但仍然具有强调作用。
+    --sx-color-secondary-hover: rgba(var(--sx-violet-6), 1); // 次要颜色悬浮态
+    --sx-color-secondary-active: rgba(var(--sx-violet-7), 1); // 次要颜色激活态
+    --sx-color-secondary-disabled: rgba(var(--sx-violet-2), 1); // 次要颜色禁用态
+    --sx-color-secondary-light-default: rgba(var(--sx-violet-0), 1); // 浅版次要颜色（多用于背景）。强调作用次于主要颜色，但仍然具有强调作用。
+    --sx-color-secondary-light-hover: rgba(var(--sx-violet-1), 1); // 浅版次要颜色悬浮态
+    --sx-color-secondary-light-active: rgba(var(--sx-violet-2), 1); // 浅版次要颜色激活态
+
+    --sx-color-tertiary: rgba(var(--sx-grey-5), 1); // 第三颜色，可以在页面上多次使用
+    --sx-color-tertiary-hover: rgba(var(--sx-grey-6), 1); // 第三颜色悬浮态
+    --sx-color-tertiary-active: rgba(var(--sx-grey-7), 1); // 第三颜色激活态
+    --sx-color-tertiary-light-default: rgba(var(--sx-grey-0), 1); // 浅版第三颜色（多用于背景），可以在页面上多次使用
+    --sx-color-tertiary-light-hover: rgba(var(--sx-grey-1), 1); // 浅版第三颜色悬浮态
+    --sx-color-tertiary-light-active: rgba(var(--sx-grey-2), 1); // 浅版第三颜色激活态
+
+    --sx-color-default: rgba(var(--sx-grey-0), 1); // 不建议使用
+    --sx-color-default-hover: rgba(var(--sx-grey-1), 1); // 不建议使用
+    --sx-color-default-active: rgba(var(--sx-grey-2), 1); // 不建议使用
+
+    --sx-color-info: rgba(var(--sx-blue-5), 1); // 信息色, 通常用于表达客观、中立信息
+    --sx-color-info-hover: rgba(var(--sx-blue-6), 1); // 信息色悬浮态
+    --sx-color-info-active: rgba(var(--sx-blue-7), 1); // 信息色激活态
+    --sx-color-info-disabled: rgba(var(--sx-blue-2), 1); // 信息色禁用态
+    --sx-color-info-light-default: rgba(var(--sx-blue-0), 1); // 浅版信息色（多用于背景），通常用于表达客观、中立信息
+    --sx-color-info-light-hover: rgba(var(--sx-blue-1), 1); // 浅版信息色悬浮态
+    --sx-color-info-light-active: rgba(var(--sx-blue-2), 1); // 浅版信息色激活态
+
+    --sx-color-success: rgba(var(--sx-green-5), 1); // 成功色，表示安全、成功、开启的状态
+    --sx-color-success-hover: rgba(var(--sx-green-6), 1); // 成功色悬浮态
+    --sx-color-success-active: rgba(var(--sx-green-7), 1); // 成功色激活态
+    --sx-color-success-disabled: rgba(var(--sx-green-2), 1); // 成功色禁用态
+    --sx-color-success-light-default: rgba(var(--sx-green-0), 1); // 浅版成功色（多用于背景），表示安全、成功、开启的状态
+    --sx-color-success-light-hover: rgba(var(--sx-green-1), 1); // 浅版成功色悬浮态
+    --sx-color-success-light-active: rgba(var(--sx-green-2), 1); // 浅版成功色激活态
+
+    --sx-color-danger: rgba(var(--sx-red-5), 1); // 危险色，表示危险的操作、或需要特别注意的危险信息
+    --sx-color-danger-hover: rgba(var(--sx-red-6), 1); // 危险色悬浮态
+    --sx-color-danger-active: rgba(var(--sx-red-7), 1); // 危险色激活态
+    --sx-color-danger-light-default: rgba(var(--sx-red-0), 1); // 浅版危险色（多用于背景），表示危险的操作、或需要特别注意的危险信息
+    --sx-color-danger-light-hover: rgba(var(--sx-red-1), 1); // 浅版危险色悬浮态
+    --sx-color-danger-light-active: rgba(var(--sx-red-2), 1); // 浅版危险色激活态
+
+    --sx-color-warning: rgba(var(--sx-orange-5), 1); // 警示色，表示警告、不安全的状态
+    --sx-color-warning-hover: rgba(var(--sx-orange-6), 1); // 警示色悬浮态
+    --sx-color-warning-active: rgba(var(--sx-orange-7), 1); // 警示色激活态
+    --sx-color-warning-light-default: rgba(var(--sx-orange-0), 1); // 浅版警示色（多用于背景），表示警告、不安全的状态
+    --sx-color-warning-light-hover: rgba(var(--sx-orange-1), 1); // 浅版警示色悬浮态
+    --sx-color-warning-light-active: rgba(var(--sx-orange-2), 1); // 浅版警示色激活态
+
+    --sx-color-focus-border: rgba(var(--sx-blue-5), 1); // 多用于边框激活态颜色
+
+    --sx-color-disabled-text: rgba(var(--sx-grey-9), .35); // 禁用态 - 文字
+    --sx-color-disabled-border: rgba(var(--sx-grey-1), 1); // 禁用态 - 描边
+    --sx-color-disabled-bg: rgba(var(--sx-grey-1), 1); // 禁用态 - 背景
+    --sx-color-disabled-fill: rgba(var(--sx-grey-8), .04); // 禁用态 - 填充
+
+    --sx-color-shadow: rgba(var(--sx-black), .04); // 用于模拟描边的阴影颜色
+
+    --sx-color-link: rgba(var(--sx-blue-5), 1); // 链接颜色
+    --sx-color-link-hover: rgba(var(--sx-blue-6), 1); // 链接颜色 - 悬浮态
+    --sx-color-link-active: rgba(var(--sx-blue-7), 1); // 链接颜色 - 激活态
+    --sx-color-link-visited: rgba(var(--sx-blue-5), 1); // 链接颜色 - 已访问
+
+    --sx-color-border: rgba(var(--sx-grey-9), .08); // 默认描边颜色
+    --sx-color-nav-bg: rgba(var(--sx-white), 1); // 导航背景色
+
+    --sx-overlay-bg: rgba(22, 22, 26, .6); // 蒙层背景色
+
+    --sx-color-fill-0: rgba(var(--sx-grey-8), .05); // 填充色 - 默认态
+    --sx-color-fill-1: rgba(var(--sx-grey-8), .09); // 填充色 - 悬浮态
+    --sx-color-fill-2: rgba(var(--sx-grey-8), .13); // 填充色 - 激活态
+    --sx-color-bg-0: rgba(var(--sx-white), 1); // 背景色 - 最下层（底部页面）
+    --sx-color-bg-1: rgba(var(--sx-white), 1); // 背景色 - 次下层（页面中需要提升的内容）
+    --sx-color-bg-2: rgba(var(--sx-white), 1); // 背景色 - 中间层（模态等容器）
+    --sx-color-bg-3: rgba(var(--sx-white), 1); // 背景色 - 次上层（通知，Toast等）
+    --sx-color-bg-4: rgba(var(--sx-white), 1); // 背景色 - 最上层（特殊）
+    --sx-color-text-0: rgba(var(--sx-grey-9), 1); // 文本/图标颜色 - 最主要
+    --sx-color-text-1: rgba(var(--sx-grey-9), .8); // 文本/图标颜色 - 稍次要
+    --sx-color-text-2: rgba(var(--sx-grey-9), .6); // 文本/图标颜色 - 次要
+    --sx-color-text-3: rgba(var(--sx-grey-9), .35); // 文本/图标颜色 - 最次要
+    --sx-shadow-elevated: 0 0 1px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .1); // 用于toast, modal, popover等需要提升层级的界面元素
+    --sx-border-radius-extra-small: 3px; // 超小圆角，用于 checkbox 内圆角
+    --sx-border-radius-small: 3px; // 小圆角, 用于 button、tag、tabs 等大多数组件, 比较常用
+    --sx-border-radius-medium: 6px; // 中圆角, 用于 dropdown、scrollist、transfer 等菜单类组件
+    --sx-border-radius-large: 12px; // 大圆角, 用于 modal
+    --sx-border-radius-circle: 50%; // 全圆角, 用于 avatar, badge 等组件
+    --sx-border-radius-full: 9999px; // 用于创建全尺寸圆角，如胶囊标签等
+}
+
+body[theme-mode="dark"], body .sx-always-dark {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    --sx-color-white: rgba(228, 231, 245, 1);
+    --sx-color-black: rgba(var(--sx-black), 1);
+    --sx-color-primary: rgba(var(--sx-blue-5), 1);
+    --sx-color-primary-hover: rgba(var(--sx-blue-6), 1);
+    --sx-color-primary-active: rgba(var(--sx-blue-7), 1);
+    --sx-color-primary-disabled: rgba(var(--sx-blue-2), 1);
+    --sx-color-primary-light-default: rgba(var(--sx-blue-5), .2);
+    --sx-color-primary-light-hover: rgba(var(--sx-blue-5), .3);
+    --sx-color-primary-light-active: rgba(var(--sx-blue-5), .4);
+    --sx-color-secondary: rgba(var(--sx-blue-5), 1);
+    --sx-color-secondary-hover: rgba(var(--sx-blue-6), 1);
+    --sx-color-secondary-active: rgba(var(--sx-blue-7), 1);
+    --sx-color-secondary-disabled: rgba(var(--sx-blue-2), 1);
+    --sx-color-secondary-light-default: rgba(var(--sx-blue-5), .2);
+    --sx-color-secondary-light-hover: rgba(var(--sx-blue-5), .3);
+    --sx-color-secondary-light-active: rgba(var(--sx-blue-5), .4);
+    --sx-color-tertiary: rgba(var(--sx-grey-5), 1);
+    --sx-color-tertiary-hover: rgba(var(--sx-grey-6), 1);
+    --sx-color-tertiary-active: rgba(var(--sx-grey-7), 1);
+    --sx-color-tertiary-light-default: rgba(var(--sx-grey-5), .2);
+    --sx-color-tertiary-light-hover: rgba(var(--sx-grey-5), .3);
+    --sx-color-tertiary-light-active: rgba(var(--sx-grey-5), .4);
+    --sx-color-default: rgba(var(--sx-grey-0), 1);
+    --sx-color-default-hover: rgba(var(--sx-grey-1), 1);
+    --sx-color-default-active: rgba(var(--sx-grey-2), 1);
+    --sx-color-info: rgba(var(--sx-blue-5), 1);
+    --sx-color-info-hover: rgba(var(--sx-blue-6), 1);
+    --sx-color-info-active: rgba(var(--sx-blue-7), 1);
+    --sx-color-info-disabled: rgba(var(--sx-blue-2), 1);
+    --sx-color-info-light-default: rgba(var(--sx-blue-5), .2);
+    --sx-color-info-light-hover: rgba(var(--sx-blue-5), .3);
+    --sx-color-info-light-active: rgba(var(--sx-blue-5), .4);
+    --sx-color-success: rgba(var(--sx-green-5), 1);
+    --sx-color-success-hover: rgba(var(--sx-green-6), 1);
+    --sx-color-success-active: rgba(var(--sx-green-7), 1);
+    --sx-color-success-disabled: rgba(var(--sx-green-2), 1);
+    --sx-color-success-light-default: rgba(var(--sx-green-5), .2);
+    --sx-color-success-light-hover: rgba(var(--sx-green-5), .3);
+    --sx-color-success-light-active: rgba(var(--sx-green-5), .4);
+    --sx-color-danger: rgba(var(--sx-red-5), 1);
+    --sx-color-danger-hover: rgba(var(--sx-red-6), 1);
+    --sx-color-danger-active: rgba(var(--sx-red-7), 1);
+    --sx-color-danger-light-default: rgba(var(--sx-red-5), .2);
+    --sx-color-danger-light-hover: rgba(var(--sx-red-5), .3);
+    --sx-color-danger-light-active: rgba(var(--sx-red-5), .4);
+    --sx-color-warning: rgba(var(--sx-orange-5), 1);
+    --sx-color-warning-hover: rgba(var(--sx-orange-6), 1);
+    --sx-color-warning-active: rgba(var(--sx-orange-7), 1);
+    --sx-color-warning-light-default: rgba(var(--sx-orange-5), .2);
+    --sx-color-warning-light-hover: rgba(var(--sx-orange-5), .3);
+    --sx-color-warning-light-active: rgba(var(--sx-orange-5), .4);
+    --sx-color-focus-border: rgba(var(--sx-blue-5), 1);
+    --sx-color-disabled-text: rgba(var(--sx-grey-9), .35);
+    --sx-color-disabled-border: rgba(var(--sx-grey-1), 1);
+    --sx-color-disabled-bg: rgba(var(--sx-grey-1), 1);
+    --sx-color-disabled-fill: rgba(var(--sx-grey-8), .04);
+    --sx-color-link: rgba(var(--sx-blue-5), 1);
+    --sx-color-link-hover: rgba(var(--sx-blue-6), 1);
+    --sx-color-link-active: rgba(var(--sx-blue-7), 1);
+    --sx-color-link-visited: rgba(var(--sx-blue-5), 1);
+    --sx-color-nav-bg: rgba(35, 36, 41, 1);
+    --sx-shadow-elevated: inset 0 0 0 1px rgba(255, 255, 255, .1), 0 4px 14px rgba(0, 0, 0, .25);
+    --sx-overlay-bg: rgba(22, 22, 26, .6);
+    --sx-color-fill-0: rgba(var(--sx-white), .05);
+    --sx-color-fill-1: rgba(var(--sx-white), .09);
+    --sx-color-fill-2: rgba(var(--sx-white), .13);
+    --sx-color-border: rgba(var(--sx-white), .08);
+    --sx-color-shadow: rgba(var(--sx-black), .04);
+    --sx-color-bg-0: rgba(22, 22, 26, 1);
+    --sx-color-bg-1: rgba(35, 36, 41, 1);
+    --sx-color-bg-2: rgba(53, 54, 60, 1);
+    --sx-color-bg-3: rgba(67, 68, 74, 1);
+    --sx-color-bg-4: rgba(79, 81, 89, 1);
+    --sx-color-text-0: rgba(var(--sx-grey-9), 1);
+    --sx-color-text-1: rgba(var(--sx-grey-9), .8);
+    --sx-color-text-2: rgba(var(--sx-grey-9), .6);
+    --sx-color-text-3: rgba(var(--sx-grey-9), .35);
+    --sx-border-radius-extra-small: 3px;
+    --sx-border-radius-small: 3px;
+    --sx-border-radius-medium: 6px;
+    --sx-border-radius-large: 12px;
+    --sx-border-radius-circle: 50%;
+    --sx-border-radius-full: 9999px;
+}

@@ -1,5 +1,5 @@
 // Imports
-@import './_variables.scss';
+@import './variables.scss';
 
 .sx-rating {
   display: inline-block;
@@ -11,7 +11,7 @@
   list-style: none;
   outline: none;
 
-  &-text{
+  &-text {
     color: $color-rating-text-default;
     font-size: $font-rating-text-fontSize;
   }
