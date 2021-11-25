@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+.sx-notification-wrapper {
+  position: fixed;
+  z-index: 1001;
+}
+
+.sx-notification-list {
+  position: fixed;
+  box-sizing: border-box;
+  margin: $spacing-notification_list-margin;
+  padding: $spacing-notification_list-padding;
+  z-index: $z-notification;
+  pointer-events: none;
+  right: 0;
+  top: 0;
+}
+
+.sx-notification {
+  &-notice {
+    @include shadow-elevated;
+    border-radius: $radius-notification_notice;
+    padding-top: $spacing-notification_notice-paddingTop;
+    padding-right: $spacing-notification_notice-paddingRight;
+    padding-bottom: $spacing-notification_notice-paddingBottom;
+    padding-left: $spacing-notification_notice-paddingLeft;
+    margin: $spacing-notification_notice-margin;
+    width: $width-notification_notice;
+    min-width: $width-notification_notice_minWidth;
+    background-color: $color-notification-bg-default;
+    position: relative;
+    display: flex;
+    pointer-events: auto;
+
+    &-content-wrapper {
+      flex: 1 1 auto;
+      margin-right: $spacing-notification_notice_content_wrapper-marginRight;
+    }
+
+    &-content {
+      @include font-size-regular;
+      font-weight: $font-notification_notice_content-fontWeight;
+      color: $color-notification_content-text;
+      // padding-top: $spacing-extra-tight;
+    }
+
+    &-title {
+      @include font-size-header-6;
+      font-weight: $font-notification_notice_title-fontWeight;
+      color: $color-notification_title-text;
+      margin-bottom: $spacing-notification_notice_title-marginBottom;
+    }
+
+    &-icon-close {
+      height: $width-icon-extra-large;
+
+      .sx-icon-close {
+        color: $color-notification_closeBtn-icon;
+      }
+    }
+
+    &-inner {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
