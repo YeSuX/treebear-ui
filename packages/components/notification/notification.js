@@ -6,37 +6,35 @@ import {
 
 let instance;
 let instances = [];
+let positions = [];
 let seed = 0;
 
-//挂载父节点
-const root = createApp(NotificationWrapper);
-const parent2 = document.createElement('div');
-const instance2 = root.mount(parent2);
-document.body.appendChild(instance2.$el)
-
 const sxNotification = function (options) {
-  console.log('options', options);
 
-  const position = options.position || 'top-right';
+  const position = options.position || 'topRight';
+  const duration = options.duration || 3;
   options.seed = seed;
+  options.position = position;
+  options.duration = duration;
   instances.push(instance)
 
-  //校验位置
-  let verticalOffset = options.offset || 0;
+  if (!positions.includes(position)) {
+    //挂载父节点
+    const root = createApp(NotificationWrapper);
+    root._component.options = options;
+    const parentRoot = document.createElement('div');
+    const instanceRoot = root.mount(parentRoot);
+    document.body.appendChild(instanceRoot.$el)
+  }
 
-  // instances.forEach(item => {
-  //   verticalOffset += item.$el.offsetHeight + 16;
-  // })
-  options.verticalOffset = verticalOffset;
+  positions.push(position)
 
   //获取组件
   const app = createApp(Notification);
 
-
-  console.log('app', app);
-
   //传入data
   app._component.options = options;
+
   //创建祖节点
   const parent = document.createElement('div');;
   //挂载未挂载的组件

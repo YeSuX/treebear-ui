@@ -1,0 +1,10 @@
+//transition 
+.sx-fade-enter-active,
+.sx-fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.sx-fade-enter-from,
+.sx-fade-leave-to {
+  opacity: 0;
+}

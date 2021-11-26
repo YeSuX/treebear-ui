@@ -12,8 +12,38 @@
   padding: $spacing-notification_list-padding;
   z-index: $z-notification;
   pointer-events: none;
-  right: 0;
-  top: 0;
+
+  &-topRight {
+    right: 0;
+    top: 0;
+  }
+
+  &-top {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-topLeft {
+    left: 0;
+    top: 0;
+  }
+
+  &-bottom {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &-bottomRight {
+    bottom: 0;
+    right: 0;
+  }
+
+  &-bottomLeft {
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .sx-notification {
@@ -31,6 +61,55 @@
     position: relative;
     display: flex;
     pointer-events: auto;
+
+    &-icon {
+      width: $width-notification_notice-icon;
+      @include font-size-header-6;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      height: 100%;
+      margin-right: $spacing-notification_notice_icon-marginRight;
+    }
+
+    &-light {
+      &.sx-notification-notice-warning {
+        background-color: $color-notification_warning_light-bg;
+        border: $width-notification_notice-border solid $color-notification_warning_light-border;
+      }
+
+      &.sx-notification-notice-success {
+        background-color: $color-notification_success_light-bg;
+        border: $width-notification_notice-border solid $color-notification_success_light-border;
+      }
+
+      &.sx-notification-notice-info,
+      &.sx-notification-notice-default {
+        background-color: $color-notification_info_light-bg;
+        border: $width-notification_notice-border solid $color-notification_info_light-border;
+      }
+
+      &.sx-notification-notice-danger {
+        background-color: $color-notification_danger_light-bg;
+        border: $width-notification_notice-border solid $color-notification_danger_light-border;
+      }
+    }
+
+    &-info {
+      color: $color-notification_info-icon;
+    }
+
+    &-warning {
+      color: $color-notification_warning-icon;
+    }
+
+    &-danger {
+      color: $color-notification_danger-icon;
+    }
+
+    &-success {
+      color: $color-notification_success-icon;
+    }
 
     &-content-wrapper {
       flex: 1 1 auto;
