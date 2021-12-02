@@ -3,7 +3,7 @@ import sxButton from '../../button/button.vue'
 import { ref } from "@vue/reactivity";
 
 export default {
-  title: '反馈类/进度条 progress',
+  title: '反馈类/进度条 Progress',
   components: { sxProgress }
 }
 
