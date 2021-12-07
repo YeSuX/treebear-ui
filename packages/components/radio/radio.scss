@@ -1,0 +1,199 @@
+@import './variabled.scss';
+
+.sx-radio {
+  @include box-sizing;
+  @include font-size-regular;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  &.sx-radio-vertical {
+    display: block;
+  }
+
+  min-height: $height-radio_inner_min;
+  min-width: $width-radio_inner;
+  cursor: pointer;
+  vertical-align: bottom;
+  text-align: left;
+
+  input[type="radio"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  &:hover {
+    .sx-radio-inner-display {
+      background: $color-radio_default-bg-hover;
+      border: solid $width-radio_hover-border $color-radio_default-border-hover;
+    }
+
+    .sx-radio-inner-checked {
+      .sx-radio-inner-display {
+        background: $color-radio_primary-bg-hover;
+      }
+    }
+  }
+
+  &:active {
+    .sx-radio-inner-display {
+      background: $color-radio_default-bg-active;
+    }
+
+    .sx-radio-inner-checked {
+      .sx-radio-inner-display {
+        background: $color-radio_primary-bg-active;
+      }
+    }
+  }
+
+
+
+  &.sx-radio-disabled:hover,
+  &.sx-radio-disabled:active {
+    .sx-radio-inner-display {
+      background: $color-radio_disabled-bg-default;
+      border: solid $width-radio_disabled-border $color-radio_disabled-border-default;
+    }
+
+    .sx-radio-inner-checked {
+      .sx-radio-inner-display {
+        background: $color-radio_checked-bg-disabled;
+      }
+    }
+  }
+
+  &-inner {
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 0;
+    width: $width-radio_inner;
+    height: $width-radio_inner;
+    vertical-align: sub;
+    user-select: none; // prevent text under it will be selected when double click
+
+    &-display {
+      position: absolute;
+      left: 0;
+      top: 0;
+      @include box-sizing;
+      width: $width-radio_inner;
+      height: $width-radio_inner;
+      border: solid $width-radio_innder-border $color-radio_default-border-default;
+      border-radius: $width-radio_inner;
+      background: $color-radio_default-bg-default;
+
+      .sx-icon {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &:hover {
+    .sx-radio-inner-display {
+      background: $color-radio_default-bg-hover;
+    }
+  }
+
+  &:active {
+    .sx-radio-inner-display {
+      background: $color-radio_default-bg-active;
+    }
+  }
+
+  &-addon {
+    user-select: none;
+    padding-left: $spacing-radio_addon-paddingLeft;
+    margin-left: $spacing-radio_addon-marginLeft;
+    color: $color-radio_default-text-default;
+    display: inline-flex;
+    align-items: center;
+
+  }
+
+  .sx-radio-inner-checked {
+
+    &:hover {
+      .sx-radio-inner-display {
+        background: $color-radio_primary-bg-hover;
+      }
+    }
+
+    &:active {
+      .sx-radio-inner-display {
+        background: $color-radio_primary-bg-active;
+      }
+    }
+
+    .sx-radio-inner-display {
+      border: solid $width-radio_innder-border $color-radio_primary-border-default;
+      background: $color-radio_primary-bg-default;
+      color: $color-radio_primary-text-default;
+      border-radius: $width-radio_inner;
+    }
+
+    >.sx-radio-addon {
+      color: $color-radio_default-text-default;
+    }
+  }
+
+
+  &-disabled {
+
+    &,
+    &:hover {
+      cursor: not-allowed;
+    }
+
+    .sx-radio-inner {
+      cursor: not-allowed;
+
+      &-display {
+        opacity: 0.75;
+        background: $color-radio_disabled-bg-default;
+        border-color: $color-radio_checked-border-disabled;
+
+        &:hover {
+          background: $color-radio_disabled-bg-hover;
+        }
+      }
+    }
+
+    .sx-radio-inner-checked {
+      .sx-radio-inner-display {
+        background: $color-radio_checked-bg-disabled;
+        border-color: $color-radio_checked-border-disabled;
+
+        &:hover {
+          background: $color-radio_checked-bg-disabled;
+        }
+      }
+    }
+
+    .sx-radio-addon {
+      color: $color-radio_disabled-text-default;
+    }
+
+    .sx-radio-extra {
+      color: $color-radio_disabled-text-default;
+    }
+  }
+
+  &-extra {
+    flex-grow: 1;
+    flex-basis: 100%;
+    flex-shrink: 0;
+    color: $color-radio_extra-text-default;
+    padding-left: $spacing-radio_extra-paddingLeft;
+    box-sizing: border-box;
+  }
+}
