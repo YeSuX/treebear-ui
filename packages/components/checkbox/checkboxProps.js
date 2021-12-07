@@ -8,5 +8,8 @@ export const props = {
   disabled: {
     type: Boolean,
     default: false
-  }
+  },
+  value: {
+    type: [String, Number]
+  },
 }

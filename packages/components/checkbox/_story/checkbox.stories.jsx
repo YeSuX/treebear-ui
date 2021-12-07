@@ -57,6 +57,24 @@ const groupTemplate = () => ({
       <sx-checkbox value="c">复选框 C</sx-checkbox>
       <sx-checkbox value="d">复选框 D</sx-checkbox>
     </sx-checkbox-group>
+    <div>{{checkList}}</div>
+  `,
+  setup() {
+    const checkList = ref(['a', 'b', 'd']);
+    return { checkList }
+  }
+})
+
+const directionTemplate = () => ({
+  components: { sxCheckbox, sxCheckboxGroup },
+  template: `
+    <sx-checkbox-group direction='horizontal' v-model="checkList">
+      <sx-checkbox value="a">复选框 A</sx-checkbox>
+      <sx-checkbox value="b">复选框 B</sx-checkbox>
+      <sx-checkbox value="c">复选框 C</sx-checkbox>
+      <sx-checkbox value="d">复选框 D</sx-checkbox>
+    </sx-checkbox-group>
+    <div>{{checkList}}</div>
   `,
   setup() {
     const checkList = ref(['a', 'b', 'd']);
@@ -72,3 +90,5 @@ export const disabled = disabledTemplate.bind({})
 disabled.storyName = '禁用';
 export const group = groupTemplate.bind({})
 group.storyName = '复选框组';
+export const direction = directionTemplate.bind({})
+direction.storyName = '水平排列';
