@@ -197,3 +197,33 @@
     box-sizing: border-box;
   }
 }
+
+.sx-radioGroup {
+  @include font-size-regular;
+
+  &-vertical {
+    .sx-radio {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .sx-radio {
+      display: block;
+      margin-bottom: $spacing-radio_group_vertical-marginBottom;
+
+    }
+  }
+
+  &-horizontal {
+    .sx-radio {
+      margin-right: $spacing-radio_group_horizontal-marginRight;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+
+    display: inline-block;
+  }
+}
